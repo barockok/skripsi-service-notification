@@ -14,8 +14,7 @@ type NotificationParams struct {
   Trx Transaction `json:"transaction"`
 }
 
-type HttpNotificationHandler struct {
-}
+type HttpNotificationHandler struct {}
 
 func (h *HttpNotificationHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
   body, err := ioutil.ReadAll(r.Body)
